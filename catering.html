@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CATERING</title>
+<style media="screen">
+.dropdown {
+     position: relative;
+     display: inline-block;
+
+}
+/* set the size and position of button on web */
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/* provide css to background of list items */
+#items {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 185px;
+}
+/* provide css to list items */
+#items a {
+     display: block;
+     font-size: 18px;
+     background-color: #ddd;
+     color: black;
+     text-decoration: none;
+     padding: 10px;
+}
+</style>
+    <script LANGUAGE="JavaScript" type="text/javascript">
+    function show_hide() {
+       var click = document.getElementById("items");
+       if(click.style.display ==="none") {
+          click.style.display ="block";
+       } else {
+          click.style.display ="none";
+       }
+    }
+    function favTutorial() {
+    var mylist = document.getElementById("myList");
+    document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
+    var mylists = document.getElementById("myLists");
+    document.getElementById("favourites").value = mylists.options[mylists.selectedIndex].text;
+    var mylistss = document.getElementById("myListss");
+    document.getElementById("favouritess").value = mylistss.options[mylistss.selectedIndex].text;
+    var mylistsss = document.getElementById("myListsss");
+    document.getElementById("favouritesss").value = mylistsss.options[mylistsss.selectedIndex].text;
+    var mylistssss = document.getElementById("myListssss");
+    document.getElementById("favouritessss").value = mylistssss.options[mylistssss.selectedIndex].text;
+    }
+
+
+        function display() {
+
+          DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=600,height=300')
+          message = "<ul><li><b>FOOD ITEM 1: </b>" + document.form1.favourite.value;
+
+
+          message += "<li><b>FOOD ITEM 2: </b>" + document.form1.favourites.value;
+
+          message += "<li><b>FOOD ITEM 3: </b>" + document.form1.favouritess.value;
+
+          message += "<li><b>FOOD ITEM 4: </b>" + document.form1.favouritesss.value;
+
+          message += "<li><b>FOOD ITEM 5: </b>" + document.form1.favouritessss.value;
+
+         message += "<li><b>OTHER FOOD ITEM: </b>" + document.form1.textone.value;
+         message += "<li><b>DATE: </b>" + document.form1.date.value;
+         message += "<li><b>ENTER NO. OF PEOPLE FOR BOOKING: </b>" + document.form1.people.value;
+         message += "<li><b>ADDRESS: </b>" + document.form1.enter.value;
+         message += "<li><b>PHONE: </b>" + document.form1.phone.value+ "</ul>";
+
+
+          DispWin.document.write(message);
+          alert("Your menu has been booked.");
+        }
+
+
+    </script>
+
+  </head>
+  <body style="background-color:DarkOliveGreen;color:FloralWhite">
+   <h1>Enter your catering order details in the block provided below.</h1>
+   <p><em><s<strong>There are list of items in our Bhavya's restaurant.</strong>
+     They are mentioned in the MENU.</em></p>
+ <div class="dropdown">
+   <button onclick="show_hide()" class="button">MENU</button>
+
+       <!-- dropdown list items will show when we click the drop button -->
+       <div id="items">
+          <a href="starters.html"> STARTERS </a>
+          <a href="maincourse.html"> MAIN COURSE </a>
+          <a href="dessert.html"> DESSERTS </a>
+</div>
+       </div>
+    <br>
+       <p>Enter the details of your order. When you press the Place order button,
+       your order will be displayed in a pop-up window.</p>
+   <br><br>
+   <div style="background-color:FloralWhite;color:Black;border:1px solid #000;">
+   <br>ENTER YOUR MENU details...</div> <br>
+   <form name="form1">
+     <b> FOOD ITEM 1  </b>
+     <select id = "myList" onchange = "favTutorial()" >
+     <option> ---Choose food item--- </option>
+   <option> Paneer Tikka </option>
+   <option> Fried Corn Chat </option>
+   <option> French Fries</option>
+   <option> Spring Rolls </option>
+   <option> Shakes </option>
+   <option> Drinks </option>
+   <option> Fresh Lime Soda</option>
+   <option> Paneer Butter Masala </option>
+   <option> Mushroom </option>
+   <option> Stuffed capsicum</option>
+   <option> veg. Pulao </option>
+   <option> Butter Naan</option>
+   <option> Pickle </option>
+   <option> Salad </option>
+   <option> Papad </option>
+   <option> Ice-cream </option>
+   <option> Puddings </option>
+   <option> Gajar-Halwa</option>
+   <option> Moong-Daal-Halwa </option>
+   <option> Pastries </option>
+   <option>Choco-lava cake </option>
+   <option> Gulab Jamun</option>
+     </select>
+     <p> YOUR 1st SELECTED FOOD ITEM:
+     <input type = "text" id = "favourite" size = "20" </p> &nbsp;&nbsp;
+
+     <br> <br>
+
+     <b> FOOD ITEM 2 </b>
+     <select id = "myLists" onchange = "favTutorial()" >
+   <option> ---Choose food item--- </option>
+   <option> Paneer Tikka </option>
+   <option> Fried Corn Chat </option>
+   <option> French Fries</option>
+   <option> Spring Rolls </option>
+   <option> Shakes </option>
+   <option> Drinks </option>
+   <option> Fresh Lime Soda</option>
+   <option> Paneer Butter Masala </option>
+   <option> Mushroom </option>
+   <option> Stuffed capsicum</option>
+   <option> veg. Pulao </option>
+   <option> Butter Naan</option>
+   <option> Pickle </option>
+   <option> Salad </option>
+   <option> Papad </option>
+   <option> Ice-cream </option>
+   <option> Puddings </option>
+   <option> Gajar-Halwa</option>
+   <option> Moong-Daal-Halwa </option>
+   <option> Pastries </option>
+   <option>Choco-lava cake </option>
+   <option> Gulab Jamun</option>
+     </select>
+     <p> YOUR 2nd SELECTED FOOD ITEM:
+     <input type = "text" id = "favourites" size = "20" </p> &nbsp;&nbsp;
+
+     <br> <br>
+     <b> FOOD ITEM 3 </b>
+     <select id = "myListss" onchange = "favTutorial()" >
+     <option> ---Choose food item--- </option>
+     <option> ---Choose food item--- </option>
+   <option> Paneer Tikka </option>
+   <option> Fried Corn Chat </option>
+   <option> French Fries</option>
+   <option> Spring Rolls </option>
+   <option> Shakes </option>
+   <option> Drinks </option>
+   <option> Fresh Lime Soda</option>
+   <option> Paneer Butter Masala </option>
+   <option> Mushroom </option>
+   <option> Stuffed capsicum</option>
+   <option> veg. Pulao </option>
+   <option> Butter Naan</option>
+   <option> Pickle </option>
+   <option> Salad </option>
+   <option> Papad </option>
+   <option> Ice-cream </option>
+   <option> Puddings </option>
+   <option> Gajar-Halwa</option>
+   <option> Moong-Daal-Halwa </option>
+   <option> Pastries </option>
+   <option>Choco-lava cake </option>
+   <option> Gulab Jamun</option>
+     </select>
+     <p> YOUR 3rd SELECTED FOOD ITEM:
+     <input type = "text" id = "favouritess" size = "20" </p>&nbsp;&nbsp;
+
+     <br> <br>
+     <b> FOOD ITEM 4 </b>
+     <select id = "myListsss" onchange = "favTutorial()" >
+     <option> ---Choose food item--- </option>
+     <option> Paneer Tikka </option>
+     <option> Fried Corn Chat </option>
+     <option> French Fries</option>
+     <option> Spring Rolls </option>
+     <option> Shakes </option>
+     <option> Drinks </option>
+     <option> Fresh Lime Soda</option>
+     <option> Paneer Butter Masala </option>
+     <option> Mushroom </option>
+     <option> Stuffed capsicum</option>
+     <option> veg. Pulao </option>
+     <option> Butter Naan</option>
+     <option> Pickle </option>
+     <option> Salad </option>
+     <option> Papad </option>
+     <option> Ice-cream </option>
+     <option> Puddings </option>
+     <option> Gajar-Halwa</option>
+     <option> Moong-Daal-Halwa </option>
+     <option> Pastries </option>
+     <option>Choco-lava cake </option>
+     <option> Gulab Jamun</option>
+     </select>
+     <p> YOUR 4th SELECTED FOOD ITEM:
+     <input type = "text" id = "favouritesss" size = "20" </p>&nbsp;&nbsp;
+
+     <br> <br>
+     <b> FOOD ITEM 5 </b>
+     <select id = "myListssss" onchange = "favTutorial()" >
+   <option> ---Choose food item--- </option>
+   <option> Paneer Tikka </option>
+   <option> Fried Corn Chat </option>
+   <option> French Fries</option>
+   <option> Spring Rolls </option>
+   <option> Shakes </option>
+   <option> Drinks </option>
+   <option> Fresh Lime Soda</option>
+   <option> Paneer Butter Masala </option>
+   <option> Mushroom </option>
+   <option> Stuffed capsicum</option>
+   <option> veg. Pulao </option>
+   <option> Butter Naan</option>
+   <option> Pickle </option>
+   <option> Salad </option>
+   <option> Papad </option>
+   <option> Ice-cream </option>
+   <option> Puddings </option>
+   <option> Gajar-Halwa</option>
+   <option> Moong-Daal-Halwa </option>
+   <option> Pastries </option>
+   <option>Choco-lava cake </option>
+   <option> Gulab Jamun</option>
+     </select>
+     <p> YOUR 5th SELECTED FOOD ITEM:
+     <input type = "text" id = "favouritessss" size = "20" </p> &nbsp;&nbsp;
+
+     <br> <br>
+     <p><b>OTHER FOOD ITEM:</b>
+     <input type="text" id="textone" </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <p><b>DATE:</b> <input TYPE="DATE" min="2021-02-25" SIZE="30" NAME="date">
+   </p>
+   <p><b>ENTER NO. OF PEOPLE FOR BOOKING:</b> <input TYPE="TEXT" SIZE="30" NAME="people">
+   </p>
+   <p><b>ENTER YOUR ADDRESS:</b> <input TYPE="TEXT" SIZE="30" NAME="enter">
+   </p>
+   <p><b>PHONE NO.</b> <input TYPE="TEXT" SIZE="15" NAME="phone">
+   </p>
+   <p><input TYPE="BUTTON" VALUE="BOOK" onClick="display();"></p>
+   </form>
+
+
+  </body>
+</html>

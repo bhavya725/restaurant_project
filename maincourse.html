@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Main Course</title>
+    <script LANGUAGE="JavaScript" type="text/javascript">
+    function favTutorial() {
+    var mylist = document.getElementById("myList");
+    document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
+    var mylist = document.getElementById("myLists");
+    document.getElementById("favourites").value = mylist.options[mylist.selectedIndex].text;
+    var mylist = document.getElementById("myListss");
+    document.getElementById("favouritess").value = mylist.options[mylist.selectedIndex].text;
+    }
+
+    function display() {
+      DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=600,height=400')
+      message = "<ul><li><b>FOOD ITEM 1: </b>" + document.form1.favourite.value;
+      message += "<li><b>QUANTITY: </b>" + document.form1.addres.value;
+      message += "<li><b>FOOD ITEM 2: </b>" + document.form1.favourites.value;
+      message += "<li><b>QUANTITY: </b>" + document.form1.address.value;
+      message += "<li><b>FOOD ITEM 3: </b>" + document.form1.favouritess.value;
+      message += "<li><b>QUANTITY: </b>" + document.form1.addresss.value;
+      message += "<li><b>OTHER FOOD ITEM: </b>" + document.form1.textone.value;
+        message += "<li><b>QUANTITY: </b>" + document.form1.addressss.value;
+      message += "<li><b>YOUR NAME: </b>" + document.form1.yourname.value;
+
+      message += "<li><b>PHONE NO.: </b>" + document.form1.phone.value + "</ul>";
+      DispWin.document.write(message);
+      alert("Your order has been placed.");
+    }
+    </script>
+  </head>
+    <body style="background-color:LightSeaGreen; color:white;">
+      <table>
+        <tr> <th><h1>ITEMS  :</h1></th>
+          <th><h1>MAIN COURSE</h1></th>
+          </tr>
+          <th></th>
+          <tr>
+          <th align="left">
+          <ol>
+            <li>Paneer Butter Masala</li>
+            <li>Mushroom</li>
+            <li>Stuffed capsicum</li>
+            <li>veg. Pulao</li>
+            <li>Butter Naan</li>
+            <li>Pickle</li>
+            <li>Salad</li>
+            <li>Papad</li>
+          </ol>
+            </th>
+
+          <th align="left"><ul>
+            <li>Rs. 300/-</li>
+            <li>Rs. 250/-</li>
+            <li>Rs. 200/-</li>
+            <li>Rs. 100/-</li>
+            <li>Rs. 40/-</li>
+            <li>Rs. 20/-</li>
+            <li>Rs. 50/-</li>
+            <li>Rs. 40/-</li>
+          </ul></th>
+        </tr>
+        <th></th>
+        <tr>
+          <th>
+            <img src="images/butter.jpg" alt="">
+          </th>
+          <th>
+            <img src="images/m.jpg" alt="">
+          </th>
+          <th></th>
+          <th>
+            <img src="images/caps.jpg" alt="">
+          </th>
+          <th></th>
+          <th>
+            <img src="images/paneer.jpg" alt="">
+          </th>
+          <th></th>
+          <th>
+            <img src="images/papad.jpg" alt="">
+          </th>
+        </tr>
+      </table>
+      <p>Enter the details of your order. When you press the Place order button,
+      your order will be displayed in a pop-up window.</p>
+      <th><form name="form1">
+        <b> FOOD ITEM  </b>
+        <select id = "myList" onchange = "favTutorial()" >
+        <option> ---Choose your main-course!--- </option>
+        <option> Paneer Butter Masala </option>
+        <option> Mushroom </option>
+        <option> Stuffed capsicum</option>
+        <option> veg. Pulao </option>
+        <option> Butter Naan</option>
+        <option> Pickle </option>
+        <option> Salad </option>
+        <option> Papad </option>
+        </select>
+        <p> YOUR SELECTED FOOD ITEM:
+        <input type = "text" id = "favourite" size = "20" </p> &nbsp; &nbsp;
+        <b>QUANTITY:</b> <input TYPE="TEXT" SIZE="30" NAME="addres">
+        <br><br>
+        <b> FOOD ITEM  </b>
+        <select id = "myLists" onchange = "favTutorial()" >
+        <option> ---Choose your main-course!--- </option>
+        <option> Paneer Butter Masala </option>
+        <option> Mushroom </option>
+        <option> Stuffed capsicum</option>
+        <option> veg. Pulao </option>
+        <option> Butter Naan</option>
+        <option> Pickle </option>
+        <option> Salad </option>
+        <option> Papad </option>
+        </select>
+        <p> YOUR SELECTED FOOD ITEM:
+        <input type = "text" id = "favourites" size = "20" </p> &nbsp; &nbsp;
+        <b>QUANTITY:</b> <input TYPE="TEXT" SIZE="30" NAME="address">
+        <br><br>
+        <b> FOOD ITEM  </b>
+        <select id = "myListss" onchange = "favTutorial()" >
+        <option> ---Choose your main-course!--- </option>
+        <option> Paneer Butter Masala </option>
+        <option> Mushroom </option>
+        <option> Stuffed capsicum</option>
+        <option> veg. Pulao </option>
+        <option> Butter Naan</option>
+        <option> Pickle </option>
+        <option> Salad </option>
+        <option> Papad </option>
+        </select>
+        <p> YOUR SELECTED FOOD ITEM:
+        <input type = "text" id = "favouritess" size = "20" </p> &nbsp; &nbsp;
+        <b>QUANTITY:</b> <input TYPE="TEXT" SIZE="30" NAME="addresss">
+        <br><br>
+        <p> <b>OTHER FOOD ITEM:</b>
+        <input type="text" id="textone" </p>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        <b>QUANTITY:</b> <input TYPE="TEXT" SIZE="30" NAME="addressss"><br> 
+      <p><b>YOUR NAME:</b> <input TYPE="TEXT" SIZE="20" NAME="yourname">
+      </p>
+
+
+      <p><b>PHONE NO.</b> <input TYPE="TEXT" SIZE="15" NAME="phone">
+      </p>
+      <p><input TYPE="BUTTON" VALUE="PLACE ORDER" onClick="display();"></p>
+      </form></th>
+  </body>
+</html>

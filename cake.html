@@ -1,0 +1,79 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Cake Form</title>
+    <script type="text/javascript" src="indexs.js">
+
+    </script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="cakeform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Make your cake!</legend>
+                <label >Size Of the Cake</label>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />Round cake 6" -  serves 8 people (Rs. 200)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />Round cake 8" - serves 12 people (Rs. 250)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />Round cake 10" - serves 16 people(Rs. 350)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />Round cake 12" - serves 30 people(Rs. 550)</label><br/>
+                <br/>
+                <label >Flavours</label>
+
+                <select id="filling" name='filling' onchange="calculateTotal()">
+                <option value="None">Select Filling</option>
+                <option value="Lemon">Vanilla(Rs. 5)</option>
+                <option value="Custard">Custard(Rs. 5)</option>
+                <option value="Fudge">Fudge(Rs. 7)</option>
+                <option value="Mocha">Simple-Chocolate(Rs. 8)</option>
+                <option value="Raspberry">Raspberry(Rs. 10)</option>
+                <option value="Pineapple">Pineapple(Rs. 5)</option>
+                <option value="Dobash">Chocolate(Rs. 9)</option>
+                <option value="Mint">Butterscotch(Rs. 5)</option>
+                <option value="Cherry">Cherry(Rs. 5)</option>
+                <option value="Apricot">Strawberry(Rs. 8)</option>
+                <option value="Buttercream">Buttercream(Rs. 7)</option>
+                <option value="Chocolate Mousse">Chocolate Mousse(Rs. 12)</option>
+               </select>
+                <br/>
+                <p>
+                <label for='includecandles' class="inlinelabel">Include Candles(Rs. 15)</label>
+               <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+               </p>
+
+                <p>
+                <label class="inlinelabel" for='includeinscription'>Include Inscription(Rs. 20)</label>
+                <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
+                <input type="text"  id="theinscription" name="theinscription" value="Enter Inscription"  />
+                </p>
+                <div id="totalPrice"></div>
+
+                </fieldset>
+            </div>
+
+        	<div class="cont_details">
+            	<fieldset>
+                <legend>Contact Details</legend>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name='name' />
+                <br/>
+                <label for='address'>Address</label>
+                <input type="text" id="address" name='address' />
+                <br/>
+                <label for='phonenumber'>Phone Number</label>
+                <input type="text"  id="phonenumber" name='phonenumber'/>
+                <br/>
+                </fieldset>
+            </div>
+            <p><input TYPE="BUTTON" VALUE="PLACE ORDER" onClick="display();"></p>
+
+        </div>
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>

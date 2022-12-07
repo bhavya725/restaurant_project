@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Billing Form</title>
+    <script type="text/javascript" src="mainbooking.js"></script>
+    <link href="styles/cakeform.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="cakeform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>BILLING DETAILS!</legend>
+                <label >Quantity per plate</label> <br>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />quater plate (QUANTITY-1) -  serves 1 people (Rs. 00)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />half plate (QUANTITY-2) - serves 2 people (Rs. 100)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />three-fourth plate (QUANTITY-3) - serves 3 people(Rs. 150)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />full plate (QUANTITY-4) - serves 4 people(Rs. 200)</label><br/>
+                <br/>
+                <label >FOOD ITEM</label>
+
+                <select id="filling" name='filling' onchange="calculateTotal()">
+                <option value="None">Select your food item</option>
+                <option value="Mint">Paneer Butter Masala(Rs. 300)</option>
+                <option value="Cherry">Mushroom(Rs. 250)</option>
+                <option value="Apricot">Stuffed capsicum(Rs. 200)</option>
+                <option value="Buttercream">veg. Pulao(Rs. 100)</option>
+              </select>
+               <br/>
+               <p>
+               <label for='includecandles' class="inlinelabel">Includes Curd(Rs. 35)</label>
+               <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+               </p>
+
+               <p>
+               <label class="inlinelabel" for='includeinscription'>Include Inscription($20)</label>
+               <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
+               <input type="text"  id="theinscription" name="theinscription" value="Enter Inscription"  />
+               </p>
+               <div id="totalPrice"></div>
+
+               </fieldset>
+              </div>
+
+
+              </form>
+              </div><!--End of wrap-->
+
+              </body>
+              </html>

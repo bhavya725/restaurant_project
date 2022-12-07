@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Form</title>
+<style>
+</style>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function favTutorial() {
+var mylist = document.getElementById("myList");
+document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;}
+
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=600,height=300')
+  message = "<ul><li><b>DATE: </b>" + document.form1.date.value;
+  message += "<li><b>PRICE-RANGE: </b>" + document.form1.favourite.value;
+  message += "<li><b>YOUR NAME: </b>" + document.form1.yourname.value;
+  message += "<li><b>PHONE NO.: </b>" + document.form1.phone.value + "</ul>";
+  DispWin.document.write(message);
+  alert("YOUR EVENT HAS BEEN BOOKED.");
+}
+</script>
+</head>
+<body style="background-color:Black;color:White;">
+<h1>EVENT BOOKINGS</h1>
+
+<p>Enter the details of your order. When you press the BOOK button,
+your bookings will be displayed in a pop-up window.</p>
+<form name="form1">
+<p><b>DATE:</b> <input TYPE="DATE" min="2021-02-25" SIZE="20" NAME="date">
+</p>
+<select id = "myList" onchange = "favTutorial()" >
+<option> ---Choose price range--- </option>
+<option> Rs. 500-700 </option>
+<option> Rs. 1,000-1,200 </option>
+<option> Rs. 1,500-2,000</option>
+<option> Rs. 2,000-5,000 </option>
+
+</select>
+<p><b>PRICE-RANGE:</b> <input TYPE="TEXT" SIZE="30" id = "favourite">
+</p>
+<p><b>YOUR-NAME:</b> <input TYPE="TEXT" SIZE="30" NAME="yourname">
+</p>
+<p><b>PHONE NO.</b> <input TYPE="TEXT" SIZE="15" NAME="phone">
+</p>
+<p><input TYPE="BUTTON" VALUE="BOOK" onClick="display();"></p>
+</form>
+</body>
+</html>
